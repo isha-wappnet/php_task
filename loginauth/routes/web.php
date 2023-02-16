@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\RegisterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,11 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
+ 
+
+
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/first', function () {
-    return view('first')
-});
-Route:: view("about","/about");
-Route:: view("contact","/contact");
+
+ 
+
+ Route::any('/user', function (){
+
+     return view('registration');
+ });
+
+Route::post('submit', [RegisterController::class,'index'])->name('user');

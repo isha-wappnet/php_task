@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/first', function () {
-    return view('first')
+    return view('first');
 });
 Route:: view("about","/about");
 Route:: view("contact","/contact");
